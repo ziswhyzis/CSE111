@@ -1,12 +1,12 @@
 public class ChickenBurger {
-    String bun = "Sesame";
-    int price = 200;
-    String sauceOption = "Less";
-    String spiceLevel = "Not Set";
+    public String bun = "Sesame";
+    public int price = 200;
+    public String sauceOption = "Less";
+    public String spiceLevel = "Not Set";
 
     private String[] validSpiceLevels = { "Mild", "Spicy", "Naga", "Extreme" };
 
-    void customizeSpiceLevel(String level) {
+    public void customizeSpiceLevel(String level) {
         boolean valid = false;
         for (String spice : validSpiceLevels) {
             if (spice.equals(level)) {
@@ -23,7 +23,7 @@ public class ChickenBurger {
         }
     }
 
-    String serveBurger() {
+    public String serveBurger() {
         if (spiceLevel.equals("Not Set")) {
             return "Cannot serve now. Customize Spice Level first.";
         }
