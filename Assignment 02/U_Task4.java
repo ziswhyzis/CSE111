@@ -1,8 +1,8 @@
 public class MobilePhone {
-    private int contactCapacity;
-    private String[] contactNames;
-    private int[] contactNumbers;
-    private int count;
+    public int contactCapacity;
+    public String[] contactNames;
+    public int[] contactNumbers;
+    public int count;
 
     public void setContactCapacity(int capacity) {
         contactCapacity = capacity;
