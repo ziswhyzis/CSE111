@@ -1,6 +1,6 @@
 public class Bird {
-    String name;
-    int altitude = 0;
+    public String name;
+    public int altitude = 0;
 
     public void flyUp(int feet) {
         altitude += feet;
