@@ -11,13 +11,13 @@ public class MobilePhone {
     }
 
     public void addContact(String name, int phoneNumber) {
-        if (count < contactCapacity) {
+        if (count > contactCapacity) {
+            System.out.println("Storage Full!!");
+        } else {
             contactNames[count] = name;
             contactNumbers[count] = phoneNumber;
             count++;
             System.out.println("The contact of " + name + " is added.");
-        } else {
-            System.out.println("Storage Full!!!");
         }
     }
 
