@@ -12,7 +12,7 @@ public class BracuStudent {
     public void showDetails() {
         System.out.println("Student Name: " + name);
         System.out.println("Lives in " + address);
-        System.out.println("Have Buss Pass? " + busPass);
+        System.out.println("Have Bus Pass? " + busPass);
     }
 
     public void getPass() {
