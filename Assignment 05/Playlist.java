@@ -1,7 +1,7 @@
 class Playlist {
     public String name;
     public Song start;
-    public Song end;           // end point [ doubly link :D ]
+    public Song end;           // end pointer
     public Song historyStart;  // start of history link for ungrad
     public int size;
 
