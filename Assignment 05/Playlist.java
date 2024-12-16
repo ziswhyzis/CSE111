@@ -1,8 +1,8 @@
 class Playlist {
     public String name;
     public Song start;
-    public Song end;
-    public Song historyStart; // start of history link
+    public Song end;           // end point [ doubly link :D ]
+    public Song historyStart;  // start of history link for ungrad
     public int size;
 
     public Playlist(String name) {
@@ -20,9 +20,9 @@ class Playlist {
             System.out.println("No songs in " + name + ".");
         } else {
             Song temp = start;
-            int count = 1;
+            int count = 0;
             while (temp != null) {
-                System.out.println("Song-" + count);
+                System.out.println("Song-" + (count + 1));
                 temp.songInfo();
                 temp = temp.next;
                 count++;
@@ -65,7 +65,7 @@ class Playlist {
 
     public void playSong(String n) {
         Song temp = start;
-        while (temp != null) {
+        while (temp.next != null) {
             if (temp.title == n) {
                 System.out.println("Playing " + n + " by " + temp.artist + ".");
                 addHistory(temp);
@@ -90,7 +90,7 @@ class Playlist {
     }
 
     public void deleteSong(String n) {
-        if (start.title == n) { // if the first song is to delete
+        if (start.title == n) {   // if the first song is to delete
             start = start.next;
             size--;
             System.out.println(n + " deleted from " + name + ".");
@@ -115,7 +115,6 @@ class Playlist {
 
     public void merge(Playlist other) {
         this.end.next = other.start;
-        this.end = other.end;
         this.size += other.size;
         System.out.println("Merge Completed!");
     }
