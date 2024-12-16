@@ -49,6 +49,7 @@ class Playlist {
         } else if (index == 0) {
             song.next = start;
             start = song;
+            size++;
             System.out.println(song.title + " added to " + name + ".");
         } else {
             Song temp = start;
@@ -57,9 +58,9 @@ class Playlist {
             }
             song.next = temp.next;
             temp.next = song;
+            size++;
             System.out.println(song.title + " added to " + name + ".");
         }
-        size++;
     }
 
     public void playSong(String n) {
@@ -89,6 +90,12 @@ class Playlist {
     }
 
     public void deleteSong(String n) {
+        if (start.title == n) { // if the first song is to delete
+            start = start.next;
+            size--;
+            System.out.println(n + " deleted from " + name + ".");
+            return;
+        }
         Song temp = start;
         while (temp.next != null && !(temp.next.title == n)) {
             temp = temp.next;
@@ -103,12 +110,12 @@ class Playlist {
     }
 
     public int totalSong() {
-        return size - 1;
+        return size;
     }
 
     public void merge(Playlist other) {
-            this.end.next = other.start;
-            this.end = other.end;
+        this.end.next = other.start;
+        this.end = other.end;
         this.size += other.size;
         System.out.println("Merge Completed!");
     }
@@ -117,9 +124,13 @@ class Playlist {
     public void showHistory() {
         System.out.println("History of " + name + ":");
         Song temp = historyStart;
-        while (temp != null) {
-            temp.songInfo();
-            temp = temp.next;
+        if (temp == null) {
+            System.out.println("No songs were played from Second Playlist.");
+        } else {
+            while (temp != null) {
+                temp.songInfo();
+                temp = temp.next;
+            }
         }
     }
 
