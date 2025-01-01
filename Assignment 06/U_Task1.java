@@ -36,7 +36,8 @@ public class SultansDine {
         System.out.println("Total Number of branch(s): " + totalBranch);
         System.out.println("Total Sell: " + totalSell + " Taka");
         for (int i = 0; i < totalBranch; i++) {
-            System.out.print("Branch Name: " + branch[i].branchName + ", Branch Sell: " + branch[i].branchSell + " Taka" + "\nBranch consists of total sell's " + String.format("%.2f", branch[i].branchPercentage()) + "\n");
+            System.out.print("Branch Name: " + branch[i].branchName + ", Branch Sell: " + branch[i].branchSell + " Taka" + "\n");
+            System.out.println("Branch consists of total sell's " + String.format("%.2f", branch[i].branchPercentage()));
         }
     }
 }
