@@ -26,7 +26,6 @@ public class KKTea extends Tea {
         System.out.println("KK Regular Tea: " + totalRegular);
         if (totalFlavored != 0) {
             System.out.println("KK Flavored Tea: " + totalFlavored);
-
         }
     }
 }
