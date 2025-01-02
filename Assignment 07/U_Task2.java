@@ -51,8 +51,7 @@ class ScienceExam extends Exam {
     }
 
     public String toString() {
-        return "Marks: " + marks + "\nTime: " + time + "\nNumber of parts: " +
-                (parts);
+        return "Marks: " + marks + "\nTime: " + time + "\nNumber of parts: " + (parts);
     }
 }
 
