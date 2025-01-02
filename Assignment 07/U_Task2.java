@@ -51,7 +51,7 @@ class ScienceExam extends Exam {
     }
 
     public String toString() {
-        return "Marks: " + marks + "\nTime: " + time + "\nNumber of parts: " + (parts);
+        return "Marks: " + marks + "\nTime: " + time + "\nNumber of parts: " + parts;
     }
 }
 
@@ -67,7 +67,7 @@ public class ScienceExam extends Exam {
         super.time = time;
         for (String subject : subjects) {
             part += subject + ", ";
-            this.subjects += "Part " + ++parts + " - " + subject + "\n";
+            this.subjects += "Part " + (++parts) + " - " + subject + "\n";
         }
     }
 
@@ -80,6 +80,6 @@ public class ScienceExam extends Exam {
     }
 
     public String toString() {
-        return "Marks: " + marks + "\nTime: " + time + "\nNumber of parts: " + (parts);
+        return "Marks: " + marks + "\nTime: " + time + "\nNumber of parts: " + parts;
     }
 }
