@@ -1,5 +1,5 @@
 public class Dog extends Animal {
-    String name;
+    private String name;
 
     Dog () {
         System.out.println("The dog says hello!");
