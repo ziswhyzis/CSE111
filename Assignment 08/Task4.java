@@ -25,10 +25,6 @@ public class Nokia extends Mobile {
         System.out.println("Recharge successful. Current balance is " + balance + " TK.");
     }
 
-    public void activateSimCard() {
-        simCardStatus = true;
-        System.out.println("SIM card is activated successfully.");
-    }
 
     @Override
     public String toString() {
