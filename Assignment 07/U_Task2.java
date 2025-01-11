@@ -38,12 +38,10 @@ class ScienceExam extends Exam {
         String temp = "";
         for (int i = 0; i < subjects.length; i++) {
             if (subjects[i] != null) {
-                if (subjects[i] != null) {
-                    if (i < subjects.length - 1 && subjects[i + 1] != null) { // needed so it doesnt add extra newline which is not in the output
-                        temp += "Part " + (i + 3) + " - " + subjects[i] + "\n";
-                    } else {
-                        temp += "Part " + (i + 3) + " - " + subjects[i];
-                    }
+                if (i < subjects.length - 1 && subjects[i + 1] != null) { // needed so it doesnt add extra newline which is not in the output
+                    temp += "Part " + (i + 3) + " - " + subjects[i] + "\n";
+                } else {
+                    temp += "Part " + (i + 3) + " - " + subjects[i];
                 }
             }
         }
@@ -55,8 +53,7 @@ class ScienceExam extends Exam {
     }
 }
 
-
-//cheap slip-out with string concatenation
+// cheap slip-out with string concatenation
 public class ScienceExam extends Exam {
     int parts = 2;
     String part = "";
